@@ -43,6 +43,12 @@ class myLibrary{
         newBook.append(authorP);
         newBook.append(formatP);
 
+
+        let editButton=document.createElement("button");
+        editButton.innerText="edit";
+        //editButton.addEventListener('click', function(){});
+        newBook.append(editButton);
+
         let delButton=document.createElement("button");
         delButton.innerText="delete";
         delButton.addEventListener('click', function(){library.deleteFromDisplay(this);});
