@@ -5,15 +5,26 @@ body{
 .container{
     display: grid;
 
-    grid-template-columns: 100px auto;
+    grid-template-columns: 150px auto;
     
-
+    background-color: rgb(131, 210, 255);
 }
 
 .navBar{
     text-align: center;
     min-height:100vh;
     background-color: rgb(63, 150, 221);
+}
+
+.navBar button{
+    background: none;
+    border: none;
+    width:150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navBar button:hover{
+    background-color: rgb(92, 184, 245);
 }
 
 #libraryContainer{
