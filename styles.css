@@ -1,3 +1,19 @@
+/* asul-regular - latin */
+@font-face {
+    font-family: 'Asul';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/asul-v19-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/asul-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/asul-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/asul-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/asul-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/asul-v19-latin-regular.svg#Asul') format('svg'); /* Legacy iOS */
+  }
+  
+
+
 body{
     margin: 0;
 }
@@ -7,6 +23,7 @@ body{
 
     grid-template-columns: 150px auto;
     
+    font-family: Asul;
     background-color: rgb(131, 210, 255);
 }
 
@@ -43,6 +60,7 @@ body{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px 1px grey;
+    background-color: whitesmoke;
 }
 .bookCard p{
     margin:16px;
