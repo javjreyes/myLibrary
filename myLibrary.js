@@ -4,6 +4,7 @@ class myLibrary{
     
     constructor(){
         //to contain book objects
+        //{title, author, format} strings
         this.myLibrary=[];
     }
     
@@ -22,6 +23,10 @@ class myLibrary{
         let title="title";
         let author="author";
         let format="format";
+
+        let newBook=new book(title,author,format);
+        this.myLibrary.push(newBook);
+
         this.addToDisplay(title,author,format);
     }
 
@@ -47,14 +52,36 @@ class myLibrary{
         let editButton=document.createElement("button");
         editButton.innerText="edit";
         //editButton.addEventListener('click', function(){});
-        newBook.append(editButton);
+        newBook.append(editButton)
 
         let delButton=document.createElement("button");
         delButton.innerText="delete";
-        delButton.addEventListener('click', function(){library.deleteFromDisplay(this);});
+        delButton.addEventListener('click', function(){library.deleteBookFromLibrary(this);});
         newBook.append(delButton);
 
         document.getElementById("libraryContainer").append(newBook);
+    }
+
+    deleteBookFromLibrary(delButton){
+        let title=delButton.parentElement.firstElementChild.textContent;
+        this.deleteFromDisplay(delButton);
+
+        let secondChild=title.nextSibling;
+        //let author=secondChild.textContent;
+        console.log(secondChild);
+
+
+        let notFound=true;
+        let libIndex=0;
+        while(notFound){
+            if(this.myLibrary[libIndex].name==title){
+                this.myLibrary.splice(libIndex, 1);
+                notFound=false;
+            }
+        }
+
+
+        console.log(title+"deleted");
     }
 
     deleteFromDisplay(delButton){
