@@ -11,10 +11,31 @@ class myLibrary{
         //retrieve form data
         let form=document.getElementById('form');
         let newBookData= new FormData(form);
-        
+
         //instantiate new book item using form data and add to library
         let newBook=new book(newBookData.get("name"),newBookData.get("author"),newBookData.get("format"));
         this.myLibrary.append(newBook);
+    }
+
+    addToDisplay(){
+        let newBook= document.createElement("div");
+        newBook.classList.add("bookCard");
+
+        let title="title";
+        let titleH2=document.createElement("h2");
+        titleH2.innerText=title;
+        let author="author";
+        let authorP=document.createElement("p");
+        authorP.innerText=author;
+        let format="format";
+        let formatP=document.createElement("p");
+        formatP.innerText=format;
+
+        newBook.append(titleH2);
+        newBook.append(authorP);
+        newBook.append(formatP);
+
+        document.getElementById("libraryContainer").append(newBook);
     }
 }
 
