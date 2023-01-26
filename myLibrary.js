@@ -35,7 +35,15 @@ class myLibrary{
         newBook.append(authorP);
         newBook.append(formatP);
 
+        let delButton=document.createElement("button");
+        delButton.onclick="library.deleteFromDisplay(this)";
+        newBook.append(delButton);
+
         document.getElementById("libraryContainer").append(newBook);
+    }
+
+    deletefromDisplay(delButton){
+        delButton.parentElement.remove();
     }
 }
 
