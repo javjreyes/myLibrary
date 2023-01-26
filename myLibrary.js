@@ -7,7 +7,7 @@ class myLibrary{
         this.myLibrary=[];
     }
     
-    addBookToLibrary(){
+    /*addBookToLibrary(){
         //retrieve form data
         let form=document.getElementById('form');
         let newBookData= new FormData(form);
@@ -16,18 +16,26 @@ class myLibrary{
         let newBook=new book(newBookData.get("name"),newBookData.get("author"),newBookData.get("format"));
         this.myLibrary.append(newBook);
     }
+    */
 
-    addToDisplay(){
+    addBookToLibrary(){
+        let title="title";
+        let author="author";
+        let format="format";
+        this.addToDisplay(title,author,format);
+    }
+
+    addToDisplay(title,author,format){
         let newBook= document.createElement("div");
         newBook.classList.add("bookCard");
 
-        let title="title";
+        
         let titleH2=document.createElement("h2");
         titleH2.innerText=title;
-        let author="author";
+        
         let authorP=document.createElement("p");
         authorP.innerText=author;
-        let format="format";
+        
         let formatP=document.createElement("p");
         formatP.innerText=format;
 
@@ -36,13 +44,14 @@ class myLibrary{
         newBook.append(formatP);
 
         let delButton=document.createElement("button");
-        delButton.onclick="library.deleteFromDisplay(this)";
+        delButton.innerText="delete";
+        delButton.addEventListener('click', function(){library.deleteFromDisplay(this);});
         newBook.append(delButton);
 
         document.getElementById("libraryContainer").append(newBook);
     }
 
-    deletefromDisplay(delButton){
+    deleteFromDisplay(delButton){
         delButton.parentElement.remove();
     }
 }
