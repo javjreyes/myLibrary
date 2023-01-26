@@ -1,0 +1,18 @@
+.bookCard{
+    text-align: center;
+    width:150px;
+    height: 175px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 1px grey;
+}
+.bookCard p{
+    margin:16px;
+    height: 18px;
+}
+.bookCard h2{
+                                  
+}
+.bookCard:hover{
+    box-shadow: 0px 0px 4px 2px grey;
+}
