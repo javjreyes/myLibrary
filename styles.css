@@ -12,7 +12,7 @@
 
 #libraryContainer{
     display: grid;
-    grid-template-columns: repeat(6, 200px);
+    grid-template-columns: repeat(auto-fit , 200px);
 }
 
 
