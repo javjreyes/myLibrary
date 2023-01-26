@@ -49,10 +49,10 @@ class myLibrary{
         newBook.append(formatP);
 
 
-        let editButton=document.createElement("button");
+        /*let editButton=document.createElement("button");
         editButton.innerText="edit";
         //editButton.addEventListener('click', function(){});
-        newBook.append(editButton)
+        newBook.append(editButton)*/
 
         let delButton=document.createElement("button");
         delButton.innerText="delete";
