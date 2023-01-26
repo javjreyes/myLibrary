@@ -55,7 +55,7 @@ class myLibrary{
         newBook.append(editButton)*/
 
         let delButton=document.createElement("button");
-        delButton.innerText="delete";
+        delButton.innerHTML="<img src='delete.png' alt='delete'>"
         delButton.addEventListener('click', function(){library.deleteBookFromLibrary(this,title,author,format);});
         newBook.append(delButton);
 
