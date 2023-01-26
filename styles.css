@@ -11,6 +11,7 @@
 }
 
 #libraryContainer{
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit , 200px);
 }
