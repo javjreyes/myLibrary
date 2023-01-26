@@ -56,32 +56,31 @@ class myLibrary{
 
         let delButton=document.createElement("button");
         delButton.innerText="delete";
-        delButton.addEventListener('click', function(){library.deleteBookFromLibrary(this);});
+        delButton.addEventListener('click', function(){library.deleteBookFromLibrary(this,title,author,format);});
         newBook.append(delButton);
 
         document.getElementById("libraryContainer").append(newBook);
     }
 
-    deleteBookFromLibrary(delButton){
-        let title=delButton.parentElement.firstElementChild.textContent;
+    deleteBookFromLibrary(delButton,title, author, format){
+        
         this.deleteFromDisplay(delButton);
-
-        let secondChild=title.nextSibling;
-        //let author=secondChild.textContent;
-        console.log(secondChild);
-
 
         let notFound=true;
         let libIndex=0;
         while(notFound){
-            if(this.myLibrary[libIndex].name==title){
+            if(this.myLibrary[libIndex].name==title &&
+               this.myLibrary[libIndex].author==author &&
+               this.myLibrary[libIndex].format==format){
                 this.myLibrary.splice(libIndex, 1);
                 notFound=false;
+                console.log(title+" deleted");
             }
+            else if(libIndex==this.myLibrary.length){notFound=true; console.log("failed to find book");}
         }
 
 
-        console.log(title+"deleted");
+        
     }
 
     deleteFromDisplay(delButton){
