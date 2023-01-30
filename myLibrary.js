@@ -45,10 +45,10 @@ class myLibrary{
         newBook.append(formatP);
 
 
-        /*let editButton=document.createElement("button");
-        editButton.innerText="edit";
-        //editButton.addEventListener('click', function(){});
-        newBook.append(editButton)*/
+        let readButton=document.createElement("button");
+        readButton.innerText="read";
+        readButton.addEventListener('click', function(){library.markRead(this)});
+        newBook.append(readButton)
 
         let delButton=document.createElement("button");
         delButton.innerHTML="<img src='delete.png' alt='delete'>"
