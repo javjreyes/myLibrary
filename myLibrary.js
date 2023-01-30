@@ -7,24 +7,18 @@ class myLibrary{
         //{title, author, format} strings
         this.myLibrary=[];
     }
-    
-    /*addBookToLibrary(){
-        //retrieve form data
-        let form=document.getElementById('form');
-        let newBookData= new FormData(form);
 
-        //instantiate new book item using form data and add to library
-        let newBook=new book(newBookData.get("name"),newBookData.get("author"),newBookData.get("format"));
-        this.myLibrary.append(newBook);
-    }
-    */
 
     addBookToLibrary(){
+        //retrieve form data
+        let form=document.getElementById('newBookForm');
+        let newBookData= new FormData(form);
+
         document.getElementById("newBookForm").style.display="none";
 
-        let title="title";
-        let author="author";
-        let format="format";
+        let title=newBookData.get("title");
+        let author=newBookData.get("author");
+        let format=newBookData.get("format")
 
         let newBook=new book(title,author,format);
         this.myLibrary.push(newBook);
