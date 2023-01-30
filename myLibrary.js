@@ -72,10 +72,9 @@ class myLibrary{
                 notFound=false;
                 console.log(title+" deleted");
             }
-            else if(libIndex==this.myLibrary.length){notFound=true; console.log("failed to find book");}
+            else if(libIndex==this.myLibrary.length){notFound=false; console.log("Error. Failed to find book");}
+            libIndex+=1;
         }
-
-
         
     }
 
