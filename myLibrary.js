@@ -20,6 +20,8 @@ class myLibrary{
     */
 
     addBookToLibrary(){
+        document.getElementById("newBookForm").style.display="none";
+
         let title="title";
         let author="author";
         let format="format";
@@ -95,6 +97,10 @@ class book {
         this.author = author;
         this.format = format;
     }
+}
+
+function openForm(){
+    document.getElementById("newBookForm").style.display="block"
 }
 
 window.addEventListener('load', function() {init();});
