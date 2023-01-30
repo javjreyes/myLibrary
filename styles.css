@@ -44,6 +44,16 @@ body{
     background-color: rgb(92, 184, 245);
 }
 
+#legend{
+    align-items: center;
+    margin-top: 500px;
+}
+#legend img{
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 2px;
+}
+
 #libraryContainer{
     margin-top: 30px;
     justify-items: center;
