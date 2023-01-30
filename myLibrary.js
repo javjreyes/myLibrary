@@ -58,6 +58,10 @@ class myLibrary{
         document.getElementById("libraryContainer").append(newBook);
     }
 
+    markRead(readButton){
+        readButton.parentElement.style.backgroundColor="#d6d4d4";
+    }
+
     deleteBookFromLibrary(delButton,title, author, format){
         
         this.deleteFromDisplay(delButton);
@@ -81,6 +85,7 @@ class myLibrary{
     deleteFromDisplay(delButton){
         delButton.parentElement.remove();
     }
+
 }
 
 //book objects contain key information about the book
