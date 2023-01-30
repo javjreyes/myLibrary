@@ -46,16 +46,18 @@ class myLibrary{
 
 
         let readButton=document.createElement("button");
-        readButton.innerText="read";
+        readButton.innerHTML="<img src='check.png' alt='mark read'>";
         readButton.addEventListener('click', function(){library.markRead(this)});
         newBook.append(readButton)
 
         let delButton=document.createElement("button");
-        delButton.innerHTML="<img src='delete.png' alt='delete'>"
+        delButton.innerHTML="<img src='delete.png' alt='delete'>";
         delButton.addEventListener('click', function(){library.deleteBookFromLibrary(this,title,author,format);});
         newBook.append(delButton);
 
         document.getElementById("libraryContainer").append(newBook);
+
+        clearForm();
     }
 
     markRead(readButton){
@@ -98,7 +100,11 @@ class book {
 }
 
 function openForm(){
-    document.getElementById("newBookForm").style.display="block"
+    document.getElementById("newBookForm").style.display="block";
+}
+
+function clearForm(){
+    document.getElementById("newBookForm").reset();
 }
 
 window.addEventListener('load', function() {init();});
