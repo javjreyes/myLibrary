@@ -79,6 +79,7 @@ body{
 
 form{
     width: fit-content;
+    width: 183px;
     text-align: center;
     border: 1px solid;
     border-radius: 20px;
@@ -103,4 +104,11 @@ form button{
 }
 form button:hover{
     background-color: rgb(200, 226, 248);
+}
+
+#newBookForm{
+    
+    position: fixed;
+    top: calc(50% - 182px);
+    left: calc(50% - 91px);
 }
